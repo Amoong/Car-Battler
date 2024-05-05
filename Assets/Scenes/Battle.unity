@@ -919,6 +919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107750804}
   - component: {fileID: 107750803}
+  - component: {fileID: 107750805}
   m_Layer: 0
   m_Name: Card (4)
   m_TagString: Untagged
@@ -952,6 +953,8 @@ MonoBehaviour:
   bgArt: {fileID: 1258707594}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &107750804
 Transform:
   m_ObjectHideFlags: 0
@@ -968,6 +971,27 @@ Transform:
   - {fileID: 2094035151}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &107750805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107750802}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &119483408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124987894}
   - component: {fileID: 124987893}
+  - component: {fileID: 124987895}
   m_Layer: 0
   m_Name: Card (7)
   m_TagString: Untagged
@@ -1146,6 +1171,8 @@ MonoBehaviour:
   bgArt: {fileID: 1147365969}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &124987894
 Transform:
   m_ObjectHideFlags: 0
@@ -1162,6 +1189,27 @@ Transform:
   - {fileID: 1796734558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &124987895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124987892}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &150757836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1877,6 +1925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215038487}
   - component: {fileID: 215038486}
+  - component: {fileID: 215038488}
   m_Layer: 0
   m_Name: Card (6)
   m_TagString: Untagged
@@ -1910,6 +1959,8 @@ MonoBehaviour:
   bgArt: {fileID: 2086138944}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &215038487
 Transform:
   m_ObjectHideFlags: 0
@@ -1926,6 +1977,27 @@ Transform:
   - {fileID: 90315165}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &215038488
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215038485}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &222380308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,6 +2143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223533058}
   - component: {fileID: 223533057}
+  - component: {fileID: 223533059}
   m_Layer: 0
   m_Name: Card (3)
   m_TagString: Untagged
@@ -2104,6 +2177,8 @@ MonoBehaviour:
   bgArt: {fileID: 324523480}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &223533058
 Transform:
   m_ObjectHideFlags: 0
@@ -2120,6 +2195,27 @@ Transform:
   - {fileID: 1268073040}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &223533059
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223533056}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &230004401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4495,6 +4591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523595114}
   - component: {fileID: 523595113}
+  - component: {fileID: 523595115}
   m_Layer: 0
   m_Name: Card (1)
   m_TagString: Untagged
@@ -4528,6 +4625,8 @@ MonoBehaviour:
   bgArt: {fileID: 2104961384}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &523595114
 Transform:
   m_ObjectHideFlags: 0
@@ -4544,6 +4643,27 @@ Transform:
   - {fileID: 2056885933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &523595115
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523595112}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &529258924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,6 +4809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531601042}
   - component: {fileID: 531601041}
+  - component: {fileID: 531601043}
   m_Layer: 0
   m_Name: Card (8)
   m_TagString: Untagged
@@ -4722,6 +4843,8 @@ MonoBehaviour:
   bgArt: {fileID: 947493989}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &531601042
 Transform:
   m_ObjectHideFlags: 0
@@ -4738,6 +4861,27 @@ Transform:
   - {fileID: 1280554618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &531601043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531601040}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &532204497
 GameObject:
   m_ObjectHideFlags: 0
@@ -8221,6 +8365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965699390}
   - component: {fileID: 965699389}
+  - component: {fileID: 965699391}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -8254,6 +8399,8 @@ MonoBehaviour:
   bgArt: {fileID: 1485072612}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &965699390
 Transform:
   m_ObjectHideFlags: 0
@@ -8270,6 +8417,27 @@ Transform:
   - {fileID: 1191393542}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &965699391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965699388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &983839803
 GameObject:
   m_ObjectHideFlags: 0
@@ -11550,6 +11718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376529858}
   - component: {fileID: 1376529857}
+  - component: {fileID: 1376529859}
   m_Layer: 0
   m_Name: Card (5)
   m_TagString: Untagged
@@ -11583,6 +11752,8 @@ MonoBehaviour:
   bgArt: {fileID: 1122696537}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &1376529858
 Transform:
   m_ObjectHideFlags: 0
@@ -11599,6 +11770,27 @@ Transform:
   - {fileID: 601904973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1376529859
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376529856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1397939909
 GameObject:
   m_ObjectHideFlags: 0
@@ -15274,6 +15466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2039324091}
   - component: {fileID: 2039324090}
+  - component: {fileID: 2039324092}
   m_Layer: 0
   m_Name: Card (2)
   m_TagString: Untagged
@@ -15307,6 +15500,8 @@ MonoBehaviour:
   bgArt: {fileID: 1792152466}
   moveSpeed: 5
   rotateSpeed: 540
+  inHand: 0
+  handPosition: 0
 --- !u!4 &2039324091
 Transform:
   m_ObjectHideFlags: 0
@@ -15323,6 +15518,27 @@ Transform:
   - {fileID: 1849384746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2039324092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039324089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 0.02, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2056885932
 GameObject:
   m_ObjectHideFlags: 0
