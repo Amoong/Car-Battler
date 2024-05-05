@@ -950,6 +950,8 @@ MonoBehaviour:
   loreText: {fileID: 1930439922}
   characterArt: {fileID: 230004404}
   bgArt: {fileID: 1258707594}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &107750804
 Transform:
   m_ObjectHideFlags: 0
@@ -1142,6 +1144,8 @@ MonoBehaviour:
   loreText: {fileID: 1397939912}
   characterArt: {fileID: 1056330688}
   bgArt: {fileID: 1147365969}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &124987894
 Transform:
   m_ObjectHideFlags: 0
@@ -1904,6 +1908,8 @@ MonoBehaviour:
   loreText: {fileID: 764331441}
   characterArt: {fileID: 1874625192}
   bgArt: {fileID: 2086138944}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &215038487
 Transform:
   m_ObjectHideFlags: 0
@@ -2096,6 +2102,8 @@ MonoBehaviour:
   loreText: {fileID: 462500362}
   characterArt: {fileID: 548757514}
   bgArt: {fileID: 324523480}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &223533058
 Transform:
   m_ObjectHideFlags: 0
@@ -4518,6 +4526,8 @@ MonoBehaviour:
   loreText: {fileID: 1324612285}
   characterArt: {fileID: 518822474}
   bgArt: {fileID: 2104961384}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &523595114
 Transform:
   m_ObjectHideFlags: 0
@@ -4710,6 +4720,8 @@ MonoBehaviour:
   loreText: {fileID: 1675705657}
   characterArt: {fileID: 911972208}
   bgArt: {fileID: 947493989}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &531601042
 Transform:
   m_ObjectHideFlags: 0
@@ -8240,6 +8252,8 @@ MonoBehaviour:
   loreText: {fileID: 883063068}
   characterArt: {fileID: 301160372}
   bgArt: {fileID: 1485072612}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &965699390
 Transform:
   m_ObjectHideFlags: 0
@@ -11567,6 +11581,8 @@ MonoBehaviour:
   loreText: {fileID: 1117467290}
   characterArt: {fileID: 1954344316}
   bgArt: {fileID: 1122696537}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &1376529858
 Transform:
   m_ObjectHideFlags: 0
@@ -15289,6 +15305,8 @@ MonoBehaviour:
   loreText: {fileID: 2077128453}
   characterArt: {fileID: 650502557}
   bgArt: {fileID: 1792152466}
+  moveSpeed: 5
+  rotateSpeed: 540
 --- !u!4 &2039324091
 Transform:
   m_ObjectHideFlags: 0

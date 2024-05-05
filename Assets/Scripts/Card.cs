@@ -16,6 +16,10 @@ public class Card : MonoBehaviour
 
     public Image characterArt, bgArt;
 
+    private Vector3 targetPoint;
+    private Quaternion targetRot;
+    public float moveSpeed = 5f, rotateSpeed = 540f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,13 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = Vector3.Lerp(transform.position, targetPoint, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotateSpeed * Time.deltaTime);
+    }
 
+    public void MoveToPoint(Vector3 pointToMoveTo, Quaternion rotToMatch)
+    {
+        targetPoint = pointToMoveTo;
+        targetRot = rotToMatch;
     }
 }
