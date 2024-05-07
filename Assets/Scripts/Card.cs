@@ -106,6 +106,8 @@ public class Card : MonoBehaviour
                         else
                         {
                             ReturnToHand();
+
+                            UIController.instance.ShowManaWarning();
                         }
                     }
                     else
