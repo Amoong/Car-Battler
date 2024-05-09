@@ -19,6 +19,8 @@ public class DeckController : MonoBehaviour
 
     public int drawCardCost = 2;
 
+    public float waitBetweenDrawingCards = 0.2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +77,21 @@ public class DeckController : MonoBehaviour
         {
             UIController.instance.ShowManaWarning();
             UIController.instance.drawCardButton.SetActive(false);
+        }
+    }
+
+    public void DrawMultipleCards(int amountToDraw)
+    {
+        StartCoroutine(DrawMultipleCo(amountToDraw));
+    }
+
+    IEnumerator DrawMultipleCo(int amountToDraw)
+    {
+        for (int i = 0; i < amountToDraw; i++)
+        {
+            DrawCardToHand();
+
+            yield return new WaitForSeconds(waitBetweenDrawingCards);
         }
     }
 }
