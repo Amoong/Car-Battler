@@ -6,15 +6,18 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
-    public TMP_Text playerManaText;
-    public GameObject manaWarning;
-    public float manaWarningTime;
-    private float manaWarningCounter;
 
     void Awake()
     {
         instance = this;
     }
+
+    public TMP_Text playerManaText;
+    public GameObject manaWarning;
+    public float manaWarningTime;
+    private float manaWarningCounter;
+
+    public GameObject drawCardButton;
 
     void Start()
     {
@@ -42,5 +45,10 @@ public class UIController : MonoBehaviour
     {
         manaWarning.SetActive(true);
         manaWarningCounter = manaWarningTime;
+    }
+
+    public void DrawCard()
+    {
+        DeckController.instance.DrawCardForMana();
     }
 }
