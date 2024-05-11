@@ -16,6 +16,7 @@ public class BattleController : MonoBehaviour
     private int currentPlayerMaxMana;
 
     public int startingCardsAmount = 5;
+    public int cardsToDrawPerTurn = 2;
 
     public enum TurnOrder { playerActive, playerCardAttacks, enemyActive, enemyCardAttacks }
     public TurnOrder currentPhase;
@@ -77,6 +78,9 @@ public class BattleController : MonoBehaviour
                 }
 
                 FillPlayerMana();
+
+                DeckController.instance.DrawMultipleCards(cardsToDrawPerTurn);
+
                 break;
             case TurnOrder.playerCardAttacks:
                 Debug.Log("Skipping player card attacks");
