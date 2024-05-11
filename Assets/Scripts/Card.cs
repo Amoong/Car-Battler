@@ -83,7 +83,7 @@ public class Card : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && justPressed == false)
             {
-                if (Physics.Raycast(ray, out hit, 100f, whatIsPlacement))
+                if (Physics.Raycast(ray, out hit, 100f, whatIsPlacement) && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive)
                 {
                     CardPlacePoint selectedPoint = hit.collider.GetComponent<CardPlacePoint>();
 
@@ -133,7 +133,7 @@ public class Card : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (inHand)
+        if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive)
         {
             MoveToPoint(theHC.cardPositions[handPosition] + new Vector3(0f, 1f, 0f), Quaternion.identity);
         }
