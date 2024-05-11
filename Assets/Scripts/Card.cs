@@ -89,7 +89,7 @@ public class Card : MonoBehaviour
 
                     if (selectedPoint.activeCard == null && selectedPoint.isPlayerPoint)
                     {
-                        if (BattleController.instance.playerMana > manaCost)
+                        if (BattleController.instance.playerMana >= manaCost)
                         {
                             selectedPoint.activeCard = this;
                             assignedPlace = selectedPoint;
