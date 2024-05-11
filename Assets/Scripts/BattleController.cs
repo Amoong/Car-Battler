@@ -61,6 +61,8 @@ public class BattleController : MonoBehaviour
         switch (currentPhase)
         {
             case TurnOrder.playerActive:
+                UIController.instance.endTurnButton.SetActive(true);
+                UIController.instance.drawCardButton.SetActive(true);
                 break;
             case TurnOrder.playerCardAttacks:
                 Debug.Log("Skipping player card attacks");
@@ -75,5 +77,13 @@ public class BattleController : MonoBehaviour
                 AdvanceTurn();
                 break;
         }
+    }
+
+    public void EndPlayerTurn()
+    {
+        UIController.instance.endTurnButton.SetActive(false);
+        UIController.instance.drawCardButton.SetActive(false);
+
+        AdvanceTurn();
     }
 }

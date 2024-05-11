@@ -149,7 +149,7 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (inHand)
+        if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive)
         {
             isSelected = true;
             theCol.enabled = false;
