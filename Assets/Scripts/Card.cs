@@ -8,6 +8,8 @@ public class Card : MonoBehaviour
 {
     public CardScriptableObject cardSO;
 
+    public bool isPlayer;
+
     public int currentHealth;
     public int attackPower;
     public int manaCost;
@@ -33,9 +35,14 @@ public class Card : MonoBehaviour
 
     public CardPlacePoint assignedPlace;
 
-    // Start is called before the first frame update
     void Start()
     {
+        if (targetPoint == Vector3.zero)
+        {
+            targetPoint = transform.position;
+            targetRot = transform.rotation;
+        }
+
         SetupCard();
 
         theHC = FindObjectOfType<HandController>();
@@ -60,7 +67,6 @@ public class Card : MonoBehaviour
         bgArt.sprite = cardSO.bgSprite;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetPoint, moveSpeed * Time.deltaTime);
@@ -133,7 +139,7 @@ public class Card : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive)
+        if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive && isPlayer)
         {
             MoveToPoint(theHC.cardPositions[handPosition] + new Vector3(0f, 1f, 0f), Quaternion.identity);
         }
@@ -141,7 +147,7 @@ public class Card : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (inHand)
+        if (inHand && isPlayer)
         {
             MoveToPoint(theHC.cardPositions[handPosition], theHC.minPos.rotation);
         }
@@ -149,7 +155,7 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive)
+        if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive && isPlayer)
         {
             isSelected = true;
             theCol.enabled = false;

@@ -1460,6 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSO: {fileID: 11400000, guid: 6b605b773a14fc849a4b120ab8c7e9b4, type: 2}
+  isPlayer: 1
   currentHealth: 1
   attackPower: 2
   manaCost: 3
