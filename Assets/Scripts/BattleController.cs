@@ -92,8 +92,7 @@ public class BattleController : MonoBehaviour
                 AdvanceTurn();
                 break;
             case TurnOrder.enemyCardAttacks:
-                Debug.Log("Skipping enemy attacks");
-                AdvanceTurn();
+                CardPointsController.instance.EnemyAttack();
                 break;
         }
     }
