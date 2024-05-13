@@ -23,6 +23,8 @@ public class BattleController : MonoBehaviour
 
     public Transform discardPoint;
 
+    public int playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,5 +105,20 @@ public class BattleController : MonoBehaviour
         UIController.instance.drawCardButton.SetActive(false);
 
         AdvanceTurn();
+    }
+
+    public void DamagePlayer(int damageAmount)
+    {
+        if (playerHealth > 0)
+        {
+            playerHealth -= damageAmount;
+
+            if (playerHealth <= 0)
+            {
+                playerHealth = 0;
+
+                // End Battle
+            }
+        }
     }
 }
