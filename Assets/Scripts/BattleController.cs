@@ -24,6 +24,7 @@ public class BattleController : MonoBehaviour
     public Transform discardPoint;
 
     public int playerHealth;
+    public int enemyHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -116,6 +117,21 @@ public class BattleController : MonoBehaviour
             if (playerHealth <= 0)
             {
                 playerHealth = 0;
+
+                // End Battle
+            }
+        }
+    }
+
+    public void DamageEnemy(int damageAmount)
+    {
+        if (enemyHealth > 0)
+        {
+            enemyHealth -= damageAmount;
+
+            if (enemyHealth <= 0)
+            {
+                enemyHealth = 0;
 
                 // End Battle
             }
