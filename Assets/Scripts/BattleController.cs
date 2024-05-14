@@ -33,6 +33,9 @@ public class BattleController : MonoBehaviour
         FillPlayerMana();
 
         DeckController.instance.DrawMultipleCards(startingCardsAmount);
+
+        UIController.instance.SetPlayerHealthText(playerHealth);
+        UIController.instance.SetEnemyHealthText(enemyHealth);
     }
 
     // Update is called once per frame
@@ -120,6 +123,8 @@ public class BattleController : MonoBehaviour
 
                 // End Battle
             }
+
+            UIController.instance.SetPlayerHealthText(playerHealth);
         }
     }
 
@@ -135,6 +140,8 @@ public class BattleController : MonoBehaviour
 
                 // End Battle
             }
+
+            UIController.instance.SetEnemyHealthText(enemyHealth);
         }
     }
 }
