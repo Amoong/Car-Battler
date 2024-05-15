@@ -17,6 +17,9 @@ public class EnemyController : MonoBehaviour
     public Card cardToSpawn;
     public Transform cardSpawnPoint;
 
+    public enum AIType { placedFromDeck, handRandomPlace, handDefensive, handAttacking }
+    public AIType enemyAIType;
+
     void Start()
     {
         SetupDeck();
@@ -72,17 +75,30 @@ public class EnemyController : MonoBehaviour
             cardPoints.RemoveAt(randomPoint);
         }
 
-        if (selectedPoint.activeCard == null)
+        switch (enemyAIType)
         {
-            Card newCard = Instantiate(cardToSpawn, cardSpawnPoint.position, cardSpawnPoint.rotation);
-            newCard.cardSO = activeCards[0];
-            activeCards.RemoveAt(0);
-            newCard.SetupCard();
-            newCard.MoveToPoint(selectedPoint.transform.position, selectedPoint.transform.rotation);
+            case AIType.placedFromDeck:
+                if (selectedPoint.activeCard == null)
+                {
+                    Card newCard = Instantiate(cardToSpawn, cardSpawnPoint.position, cardSpawnPoint.rotation);
+                    newCard.cardSO = activeCards[0];
+                    activeCards.RemoveAt(0);
+                    newCard.SetupCard();
+                    newCard.MoveToPoint(selectedPoint.transform.position, selectedPoint.transform.rotation);
 
-            selectedPoint.activeCard = newCard;
-            newCard.assignedPlace = selectedPoint;
+                    selectedPoint.activeCard = newCard;
+                    newCard.assignedPlace = selectedPoint;
+                }
+                break;
+            case AIType.handRandomPlace:
+                break;
+            case AIType.handDefensive:
+                break;
+            case AIType.handAttacking:
+                break;
         }
+
+
 
         yield return new WaitForSeconds(.5f);
 
