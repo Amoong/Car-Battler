@@ -20,9 +20,17 @@ public class EnemyController : MonoBehaviour
     public enum AIType { placedFromDeck, handRandomPlace, handDefensive, handAttacking }
     public AIType enemyAIType;
 
+    private List<CardScriptableObject> cardsInHand = new List<CardScriptableObject>();
+    public int startHandSize;
+
     void Start()
     {
         SetupDeck();
+
+        if (enemyAIType != AIType.placedFromDeck)
+        {
+            SetupHand();
+        }
     }
 
     void Update()
@@ -67,12 +75,17 @@ public class EnemyController : MonoBehaviour
         int randomPoint = Random.Range(0, cardPoints.Count);
         CardPlacePoint selectedPoint = cardPoints[randomPoint];
 
-        // Find empty selectedPoint
-        while (selectedPoint.activeCard != null && cardPoints.Count > 0)
+        if (enemyAIType == AIType.placedFromDeck || enemyAIType == AIType.handRandomPlace)
         {
-            randomPoint = Random.Range(0, cardPoints.Count);
-            selectedPoint = cardPoints[randomPoint];
-            cardPoints.RemoveAt(randomPoint);
+            cardPoints.Remove(selectedPoint);
+
+            // Find empty selectedPoint
+            while (selectedPoint.activeCard != null && cardPoints.Count > 0)
+            {
+                randomPoint = Random.Range(0, cardPoints.Count);
+                selectedPoint = cardPoints[randomPoint];
+                cardPoints.RemoveAt(randomPoint);
+            }
         }
 
         switch (enemyAIType)
@@ -103,5 +116,19 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         BattleController.instance.AdvanceTurn();
+    }
+
+    void SetupHand()
+    {
+        for (int i = 0; i < startHandSize; i++)
+        {
+            if (activeCards.Count == 0)
+            {
+                SetupDeck();
+            }
+
+            cardsInHand.Add(activeCards[0]);
+            activeCards.RemoveAt(0);
+        }
     }
 }
