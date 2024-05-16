@@ -69,6 +69,11 @@ public class Card : MonoBehaviour
 
     void Update()
     {
+        if (BattleController.instance.battleEnded)
+        {
+            return;
+        }
+
         transform.position = Vector3.Lerp(transform.position, targetPoint, moveSpeed * Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotateSpeed * Time.deltaTime);
 
@@ -139,6 +144,11 @@ public class Card : MonoBehaviour
 
     void OnMouseOver()
     {
+        if (BattleController.instance.battleEnded)
+        {
+            return;
+        }
+
         if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive && isPlayer)
         {
             MoveToPoint(theHC.cardPositions[handPosition] + new Vector3(0f, 1f, 0f), Quaternion.identity);
@@ -147,6 +157,11 @@ public class Card : MonoBehaviour
 
     void OnMouseExit()
     {
+        if (BattleController.instance.battleEnded)
+        {
+            return;
+        }
+
         if (inHand && isPlayer)
         {
             MoveToPoint(theHC.cardPositions[handPosition], theHC.minPos.rotation);
@@ -155,6 +170,11 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (BattleController.instance.battleEnded)
+        {
+            return;
+        }
+
         if (inHand && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive && isPlayer)
         {
             isSelected = true;
