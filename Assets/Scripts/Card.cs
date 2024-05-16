@@ -69,11 +69,6 @@ public class Card : MonoBehaviour
 
     void Update()
     {
-        if (BattleController.instance.battleEnded)
-        {
-            return;
-        }
-
         transform.position = Vector3.Lerp(transform.position, targetPoint, moveSpeed * Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotateSpeed * Time.deltaTime);
 
@@ -87,12 +82,12 @@ public class Card : MonoBehaviour
                 MoveToPoint(hit.point + new Vector3(0, 2f, 0f), Quaternion.identity);
             }
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && !BattleController.instance.battleEnded)
             {
                 ReturnToHand();
             }
 
-            if (Input.GetMouseButtonDown(0) && justPressed == false)
+            if (Input.GetMouseButtonDown(0) && justPressed == false && !BattleController.instance.battleEnded)
             {
                 if (Physics.Raycast(ray, out hit, 100f, whatIsPlacement) && BattleController.instance.currentPhase == BattleController.TurnOrder.playerActive)
                 {

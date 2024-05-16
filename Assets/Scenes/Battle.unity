@@ -2890,6 +2890,7 @@ MonoBehaviour:
   discardPoint: {fileID: 478367514}
   playerHealth: 50
   enemyHealth: 50
+  battleEnded: 0
 --- !u!4 &1450033751
 Transform:
   m_ObjectHideFlags: 0
