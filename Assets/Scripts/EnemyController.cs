@@ -69,6 +69,20 @@ public class EnemyController : MonoBehaviour
 
         yield return new WaitForSeconds(.5f);
 
+        if (enemyAIType != AIType.placedFromDeck)
+        {
+            for (int i = 0; i < BattleController.instance.cardsToDrawPerTurn; i++)
+            {
+                cardsInHand.Add(activeCards[0]);
+                activeCards.RemoveAt(0);
+
+                if (activeCards.Count == 0)
+                {
+                    SetupDeck();
+                }
+            }
+        }
+
         List<CardPlacePoint> cardPoints = new List<CardPlacePoint>();
         cardPoints.AddRange(CardPointsController.instance.enemyCardPoints);
 
@@ -109,9 +123,26 @@ public class EnemyController : MonoBehaviour
             case AIType.handRandomPlace:
                 selectedCard = SelectedCardToPlay();
 
-                if (selectedCard != null)
+                iterations = 50;
+                while (selectedCard != null && iterations > 0 && selectedPoint.activeCard == null)
                 {
                     PlayCard(selectedCard, selectedPoint);
+
+
+                    // check if we should try play another card
+                    selectedCard = SelectedCardToPlay();
+
+                    iterations--;
+
+                    yield return new WaitForSeconds(CardPointsController.instance.timeBetweenAttacks);
+
+                    // Find empty selectedPoint
+                    while (selectedPoint.activeCard != null && cardPoints.Count > 0)
+                    {
+                        randomPoint = Random.Range(0, cardPoints.Count);
+                        selectedPoint = cardPoints[randomPoint];
+                        cardPoints.RemoveAt(randomPoint);
+                    }
                 }
                 break;
             case AIType.handDefensive:
