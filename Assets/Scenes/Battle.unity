@@ -2880,7 +2880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc38adc9da04f843b7c797e5a12b50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMana: 50
+  startingMana: 4
   maxMana: 12
   playerMana: 0
   enemyMana: 0
@@ -3532,7 +3532,7 @@ MonoBehaviour:
   cardToSpawn: {fileID: 2438708620668767504, guid: 5b620f4df3da73941b4f3b1b227f4eae,
     type: 3}
   cardSpawnPoint: {fileID: 1469796170}
-  enemyAIType: 1
+  enemyAIType: 2
   startHandSize: 5
 --- !u!4 &1838624304
 Transform:
