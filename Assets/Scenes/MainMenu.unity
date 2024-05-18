@@ -317,6 +317,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 564046827}
     m_Modifications:
+    - target: {fileID: 267064737675833217, guid: 537b8a6ecf054a448890663a1f878e2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 564046828}
+    - target: {fileID: 267064737675833217, guid: 537b8a6ecf054a448890663a1f878e2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 267064737675833217, guid: 537b8a6ecf054a448890663a1f878e2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2013996774587335732, guid: 537b8a6ecf054a448890663a1f878e2e,
         type: 3}
       propertyPath: m_Name
@@ -475,6 +490,7 @@ GameObject:
   - component: {fileID: 564046826}
   - component: {fileID: 564046825}
   - component: {fileID: 564046824}
+  - component: {fileID: 564046828}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -568,6 +584,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &564046828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564046823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e29a022649851d439ec4346bef32778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleSelectScene: Battle
 --- !u!1 &788615386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2013996774587335732, guid: 537b8a6ecf054a448890663a1f878e2e,
@@ -582,6 +611,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 564046827}
     m_Modifications:
+    - target: {fileID: 267064737675833217, guid: 537b8a6ecf054a448890663a1f878e2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 564046828}
+    - target: {fileID: 267064737675833217, guid: 537b8a6ecf054a448890663a1f878e2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 267064737675833217, guid: 537b8a6ecf054a448890663a1f878e2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2013996774587335732, guid: 537b8a6ecf054a448890663a1f878e2e,
         type: 3}
       propertyPath: m_Name
