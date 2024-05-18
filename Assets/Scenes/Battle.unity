@@ -679,7 +679,8 @@ MonoBehaviour:
   endTurnButton: {fileID: 783895584}
   playerDamage: {fileID: 765358083}
   enemyDamage: {fileID: 793607509}
-  battleEndScreen: {fileID: 0}
+  battleEndScreen: {fileID: 114479308}
+  battleResultText: {fileID: 485419860}
 --- !u!1 &243247147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,8 +3930,9 @@ MonoBehaviour:
   currentPhase: 0
   discardPoint: {fileID: 478367514}
   playerHealth: 50
-  enemyHealth: 50
+  enemyHealth: 10
   battleEnded: 0
+  resultScreenDelayTime: 1
 --- !u!4 &1450033751
 Transform:
   m_ObjectHideFlags: 0
