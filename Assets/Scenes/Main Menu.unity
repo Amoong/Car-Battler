@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e29a022649851d439ec4346bef32778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleSelectScene: Battle
+  battleSelectScene: Battle Select
 --- !u!1 &788615386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2013996774587335732, guid: 537b8a6ecf054a448890663a1f878e2e,

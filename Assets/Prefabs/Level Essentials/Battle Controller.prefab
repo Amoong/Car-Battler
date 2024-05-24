@@ -85,6 +85,6 @@ MonoBehaviour:
   currentPhase: 0
   discardPoint: {fileID: 2498238189770275770}
   playerHealth: 50
-  enemyHealth: 10
+  enemyHealth: 2
   battleEnded: 0
   resultScreenDelayTime: 1
