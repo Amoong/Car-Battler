@@ -72,7 +72,7 @@ public class Card : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPoint, moveSpeed * Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, rotateSpeed * Time.deltaTime);
 
-        if (isSelected)
+        if (isSelected && BattleController.instance.battleEnded == false && Time.timeScale != 0f)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -165,7 +165,7 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (BattleController.instance.battleEnded)
+        if (BattleController.instance.battleEnded || Time.timeScale == 0f)
         {
             return;
         }
