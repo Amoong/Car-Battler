@@ -8,24 +8,20 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public AudioSource menuMusic;
     public AudioSource battleSelectMusic;
     public AudioSource[] bgm;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        AudioManager.instance.PlayMenuMusic();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void StopMusic()
     {
