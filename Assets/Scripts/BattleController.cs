@@ -30,6 +30,9 @@ public class BattleController : MonoBehaviour
 
     public float resultScreenDelayTime = 1f;
 
+    [Range(0f, 1f)]
+    public float enemyFirstChance = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,12 @@ public class BattleController : MonoBehaviour
         currentEnemyMaxMana = startingMana;
 
         FillEnemyMana();
+
+        if (Random.value <= enemyFirstChance)
+        {
+            currentPhase = TurnOrder.playerCardAttacks;
+            AdvanceTurn();
+        }
     }
 
     // Update is called once per frame

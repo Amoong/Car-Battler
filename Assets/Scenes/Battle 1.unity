@@ -382,6 +382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Battle Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 7995863631385903937, guid: 3c9df29a66770274a9904ec509d22f00,
+        type: 3}
+      propertyPath: enemyFirstChance
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
