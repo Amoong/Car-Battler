@@ -23,6 +23,21 @@ public class AudioManager : MonoBehaviour
     public AudioSource battleSelectMusic;
     public AudioSource[] bgm;
 
+    private int currentBGM;
+    private bool playingBGM;
+
+    private void Update()
+    {
+        if (playingBGM)
+        {
+            if (bgm[currentBGM].isPlaying == false)
+            {
+                currentBGM = (currentBGM + 1) % bgm.Length;
+                PlayBGM();
+            }
+        }
+    }
+
     public void StopMusic()
     {
         menuMusic.Stop();
@@ -31,6 +46,8 @@ public class AudioManager : MonoBehaviour
         {
             track.Stop();
         }
+
+        playingBGM = false;
     }
 
     public void PlayMenuMusic()
@@ -51,5 +68,10 @@ public class AudioManager : MonoBehaviour
     public void PlayBGM()
     {
         StopMusic();
+
+        currentBGM = Random.Range(0, bgm.Length);
+
+        bgm[currentBGM].Play();
+        playingBGM = true;
     }
 }
