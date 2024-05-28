@@ -22,5 +22,8 @@ public class BattleSelectButton : MonoBehaviour
     public void SelectBattle()
     {
         SceneManager.LoadScene(levelToLoad);
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 }

@@ -76,29 +76,44 @@ public class UIController : MonoBehaviour
     public void DrawCard()
     {
         DeckController.instance.DrawCardForMana();
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 
     public void EndPlayerTurn()
     {
         BattleController.instance.EndPlayerTurn();
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(mainMenuScene);
         Time.timeScale = 1f;
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 
     public void ChooseNewBattle()
     {
         SceneManager.LoadScene(battleSelectScene);
         Time.timeScale = 1f;
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 
     public void PauseUnpause()
@@ -115,6 +130,9 @@ public class UIController : MonoBehaviour
 
             Time.timeScale = 1f;
         }
+
+        AudioManager.instance.PlaySFX(0);
+
     }
 
 }

@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour
     private int currentBGM;
     private bool playingBGM;
 
+    public AudioSource[] sfx;
+
     private void Update()
     {
         if (playingBGM)
@@ -73,5 +75,11 @@ public class AudioManager : MonoBehaviour
 
         bgm[currentBGM].Play();
         playingBGM = true;
+    }
+
+    public void PlaySFX(int sfxToPlay)
+    {
+        sfx[sfxToPlay].Stop();
+        sfx[sfxToPlay].Play();
     }
 }
